@@ -79,7 +79,7 @@ class CodeForm extends JFrame {
       case Some(prop) if prop.toLowerCase.startsWith("mac os x") =>
         (KeyStroke.getKeyStroke(KeyEvent.VK_G, InputEvent.META_DOWN_MASK), "⌘G")
       case _ =>
-        (KeyStroke.getKeyStroke(KeyEvent.VK_G, InputEvent.CTRL_DOWN_MASK), "Ctrl-N")
+        (KeyStroke.getKeyStroke(KeyEvent.VK_G, InputEvent.CTRL_DOWN_MASK), "Ctrl-G")
     }
 
   protected def getKeyStrokeForSelectExpr =
@@ -90,4 +90,5 @@ class CodeForm extends JFrame {
         (KeyStroke.getKeyStroke(KeyEvent.VK_T, InputEvent.CTRL_DOWN_MASK), "Ctrl-T")
     }
 
+  setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE)
 }
