@@ -1,5 +1,7 @@
 import sbt._
 import Keys._
+import sbtassembly.Plugin._
+import AssemblyKeys._
 
 object Build extends Build {
 
@@ -24,8 +26,10 @@ object Build extends Build {
 
   lazy val main = Project("main", file("."))
     .settings(commonSettings: _*)
+    .settings(assemblySettings: _*)
     .settings(
-      libraryDependencies <+= scalaVersion("org.scala-lang" % "scala-compiler" % _)
+      libraryDependencies <+= scalaVersion("org.scala-lang" % "scala-compiler" % _),
+      jarName in assembly := "scala-ast.jar"
     )
 
 }

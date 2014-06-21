@@ -1,7 +1,9 @@
 
 object AST extends App {
 
-  new CodeForm().setVisible(true)
+  val cf = new CodeForm()
+  cf.setVisible(true)
+  cf.txtCode.grabFocus()
 
 }
 
