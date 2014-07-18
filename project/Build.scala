@@ -6,7 +6,7 @@ import AssemblyKeys._
 object Build extends Build {
 
   val commonSettings = Defaults.defaultSettings ++ Seq(
-      scalaVersion := "2.11.0",
+      crossScalaVersions := Seq("2.10.0", "2.11.0"),
       scalacOptions := Seq(
         "-encoding",
         "utf8",
@@ -33,4 +33,3 @@ object Build extends Build {
     )
 
 }
-
